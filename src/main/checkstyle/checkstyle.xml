@@ -5,7 +5,9 @@
   <property name="severity" value="warning"/>
   <module name="TreeWalker">
     <property name="tabWidth" value="4"/>
+    <!-- removed at Release 8.2
     <module name="FileContentsHolder"/>
+    -->
     <module name="ConstantName">
       <property name="format" value="^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$|^[a-z][a-zA-Z0-9]*$"/>
     </module>
