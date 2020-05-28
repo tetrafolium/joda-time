@@ -555,11 +555,11 @@ public abstract class AssembledChronology extends BaseChronology {
         }
 
         private static boolean isSupported(DurationField field) {
-            return field == null ? false : field.isSupported();
+            return !(field == null) && field.isSupported();
         }
 
         private static boolean isSupported(DateTimeField field) {
-            return field == null ? false : field.isSupported();
+            return !(field == null) && field.isSupported();
         }
     }
 }

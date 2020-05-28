@@ -496,9 +496,7 @@ public class DateTimeBrowser extends JFrame {
             //
             // Debugging
             //
-            if (false) {
-                System.out.println("Line guess is: " + lineGuess);
-            }
+            
         } // end of validateFile(String)
     } // end of class LoadedFile class
 

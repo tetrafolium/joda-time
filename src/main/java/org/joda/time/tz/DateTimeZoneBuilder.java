@@ -1457,26 +1457,24 @@ public class DateTimeZoneBuilder {
                 }
             }
 
-            if (tailZone != null) {
-                if (tailZone.iStartRecurrence.getNameKey()
-                    .equals(tailZone.iEndRecurrence.getNameKey())) {
-                    if (ZoneInfoLogger.verbose()) {
-                        System.out.println("Fixing duplicate recurrent name key - " +
-                                           tailZone.iStartRecurrence.getNameKey());
-                    }
-                    if (tailZone.iStartRecurrence.getSaveMillis() > 0) {
-                        tailZone = new DSTZone(
-                            tailZone.getID(),
-                            tailZone.iStandardOffset,
-                            tailZone.iStartRecurrence.renameAppend("-Summer"),
-                            tailZone.iEndRecurrence);
-                    } else {
-                        tailZone = new DSTZone(
-                            tailZone.getID(),
-                            tailZone.iStandardOffset,
-                            tailZone.iStartRecurrence,
-                            tailZone.iEndRecurrence.renameAppend("-Summer"));
-                    }
+            if ((tailZone != null) && (tailZone.iStartRecurrence.getNameKey()
+                    .equals(tailZone.iEndRecurrence.getNameKey()))) {
+                if (ZoneInfoLogger.verbose()) {
+                    System.out.println("Fixing duplicate recurrent name key - " +
+                                       tailZone.iStartRecurrence.getNameKey());
+                }
+                if (tailZone.iStartRecurrence.getSaveMillis() > 0) {
+                    tailZone = new DSTZone(
+                        tailZone.getID(),
+                        tailZone.iStandardOffset,
+                        tailZone.iStartRecurrence.renameAppend("-Summer"),
+                        tailZone.iEndRecurrence);
+                } else {
+                    tailZone = new DSTZone(
+                        tailZone.getID(),
+                        tailZone.iStandardOffset,
+                        tailZone.iStartRecurrence,
+                        tailZone.iEndRecurrence.renameAppend("-Summer"));
                 }
             }
             

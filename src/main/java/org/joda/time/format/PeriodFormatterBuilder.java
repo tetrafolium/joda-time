@@ -1051,10 +1051,8 @@ public class PeriodFormatterBuilder {
         public int parse(String periodStr, int position) {
             String text = iText;
             int textLength = text.length();
-            if (periodStr.regionMatches(true, position, text, 0, textLength)) {
-                if (!matchesOtherAffix(textLength, periodStr, position)) {
-                    return position + textLength;
-                }
+            if ((periodStr.regionMatches(true, position, text, 0, textLength)) && (!matchesOtherAffix(textLength, periodStr, position))) {
+                return position + textLength;
             }
             return ~position;
         }
@@ -1065,10 +1063,8 @@ public class PeriodFormatterBuilder {
             int sourceLength = periodStr.length();
             search:
             for (int pos = position; pos < sourceLength; pos++) {
-                if (periodStr.regionMatches(true, pos, text, 0, textLength)) {
-                    if (!matchesOtherAffix(textLength, periodStr, pos)) {
-                        return pos;
-                    }
+                if ((periodStr.regionMatches(true, pos, text, 0, textLength)) && (!matchesOtherAffix(textLength, periodStr, pos))) {
+                    return pos;
                 }
                 // Only allow number characters to be skipped in search of suffix.
                 switch (periodStr.charAt(pos)) {
@@ -1125,15 +1121,11 @@ public class PeriodFormatterBuilder {
                 text2 = temp;
             }
 
-            if (periodStr.regionMatches(true, position, text1, 0, text1.length())) {
-                if (!matchesOtherAffix(text1.length(), periodStr, position)) {
-                    return position + text1.length();
-                }
+            if ((periodStr.regionMatches(true, position, text1, 0, text1.length())) && (!matchesOtherAffix(text1.length(), periodStr, position))) {
+                return position + text1.length();
             }
-            if (periodStr.regionMatches(true, position, text2, 0, text2.length())) {
-                if (!matchesOtherAffix(text2.length(), periodStr, position)) {
-                    return position + text2.length();
-                }
+            if ((periodStr.regionMatches(true, position, text2, 0, text2.length())) && (!matchesOtherAffix(text2.length(), periodStr, position))) {
+                return position + text2.length();
             }
 
             return ~position;
@@ -1155,15 +1147,11 @@ public class PeriodFormatterBuilder {
 
             int sourceLength = periodStr.length();
             for (int pos = position; pos < sourceLength; pos++) {
-                if (periodStr.regionMatches(true, pos, text1, 0, textLength1)) {
-                    if (!matchesOtherAffix(text1.length(), periodStr, pos)) {
-                        return pos;
-                    }
+                if ((periodStr.regionMatches(true, pos, text1, 0, textLength1)) && (!matchesOtherAffix(text1.length(), periodStr, pos))) {
+                    return pos;
                 }
-                if (periodStr.regionMatches(true, pos, text2, 0, textLength2)) {
-                    if (!matchesOtherAffix(text2.length(), periodStr, pos)) {
-                        return pos;
-                    }
+                if ((periodStr.regionMatches(true, pos, text2, 0, textLength2)) && (!matchesOtherAffix(text2.length(), periodStr, pos))) {
+                    return pos;
                 }
             }
             return ~position;
@@ -1232,10 +1220,8 @@ public class PeriodFormatterBuilder {
 
         public int parse(String periodStr, int position) {
             for (String text : iSuffixesSortedDescByLength) {
-                if (periodStr.regionMatches(true, position, text, 0, text.length())) {
-                    if (!matchesOtherAffix(text.length(), periodStr, position)) {
-                        return position + text.length();
-                    }
+                if ((periodStr.regionMatches(true, position, text, 0, text.length())) && (!matchesOtherAffix(text.length(), periodStr, position))) {
+                    return position + text.length();
                 }
             }
             return ~position;
@@ -1245,10 +1231,8 @@ public class PeriodFormatterBuilder {
             int sourceLength = periodStr.length();
             for (int pos = position; pos < sourceLength; pos++) {
                 for (String text : iSuffixesSortedDescByLength) {
-                    if (periodStr.regionMatches(true, pos, text, 0, text.length())) {
-                        if (!matchesOtherAffix(text.length(), periodStr, pos)) {
-                            return pos;
-                        }
+                    if ((periodStr.regionMatches(true, pos, text, 0, text.length())) && (!matchesOtherAffix(text.length(), periodStr, pos))) {
+                        return pos;
                     }
                 }
             }

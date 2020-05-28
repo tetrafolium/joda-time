@@ -365,11 +365,9 @@ public class DateTimeParserBucket {
      * @return true state object is valid and state restored
      */
     public boolean restoreState(Object savedState) {
-        if (savedState instanceof SavedState) {
-            if (((SavedState) savedState).restoreState(this)) {
-                iSavedState = savedState;
-                return true;
-            }
+        if ((savedState instanceof SavedState) && (((SavedState) savedState).restoreState(this))) {
+            iSavedState = savedState;
+            return true;
         }
         return false;
     }

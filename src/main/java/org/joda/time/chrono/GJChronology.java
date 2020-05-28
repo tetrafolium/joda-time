@@ -756,21 +756,15 @@ public final class GJChronology extends AssembledChronology {
         public long set(long instant, String text, Locale locale) {
             if (instant >= iCutover) {
                 instant = iGregorianField.set(instant, text, locale);
-                if (instant < iCutover) {
-                    // Only adjust if gap fully crossed.
-                    if (instant + iGapDuration < iCutover) {
-                        instant = gregorianToJulian(instant);
-                    }
-                    // Cannot verify that new value stuck because set may be lenient.
+                // Only adjust if gap fully crossed.
+                if ((instant < iCutover) && (instant + iGapDuration < iCutover)) {
+                    instant = gregorianToJulian(instant);
                 }
             } else {
                 instant = iJulianField.set(instant, text, locale);
-                if (instant >= iCutover) {
-                    // Only adjust if gap fully crossed.
-                    if (instant - iGapDuration >= iCutover) {
-                        instant = julianToGregorian(instant);
-                    }
-                    // Cannot verify that new value stuck because set may be lenient.
+                // Only adjust if gap fully crossed.
+                if ((instant >= iCutover) && (instant - iGapDuration >= iCutover)) {
+                    instant = julianToGregorian(instant);
                 }
             }
             return instant;
@@ -879,11 +873,9 @@ public final class GJChronology extends AssembledChronology {
         public long roundFloor(long instant) {
             if (instant >= iCutover) {
                 instant = iGregorianField.roundFloor(instant);
-                if (instant < iCutover) {
-                    // Only adjust if gap fully crossed.
-                    if (instant + iGapDuration < iCutover) {
-                        instant = gregorianToJulian(instant);
-                    }
+                // Only adjust if gap fully crossed.
+                if ((instant < iCutover) && (instant + iGapDuration < iCutover)) {
+                    instant = gregorianToJulian(instant);
                 }
             } else {
                 instant = iJulianField.roundFloor(instant);
@@ -896,11 +888,9 @@ public final class GJChronology extends AssembledChronology {
                 instant = iGregorianField.roundCeiling(instant);
             } else {
                 instant = iJulianField.roundCeiling(instant);
-                if (instant >= iCutover) {
-                    // Only adjust if gap fully crossed.
-                    if (instant - iGapDuration >= iCutover) {
-                        instant = julianToGregorian(instant);
-                    }
+                // Only adjust if gap fully crossed.
+                if ((instant >= iCutover) && (instant - iGapDuration >= iCutover)) {
+                    instant = julianToGregorian(instant);
                 }
             }
             return instant;
@@ -993,31 +983,27 @@ public final class GJChronology extends AssembledChronology {
         public long add(long instant, int value) {
             if (instant >= iCutover) {
                 instant = iGregorianField.add(instant, value);
-                if (instant < iCutover) {
-                    // Only adjust if gap fully crossed.
-                    if (instant + iGapDuration < iCutover) {
-                        if (iConvertByWeekyear) {
-                            int wyear = iGregorianChronology.weekyear().get(instant);
-                            if (wyear <= 0) {
-                                instant = iGregorianChronology.weekyear().add(instant, -1);
-                            }
-                        } else {
-                            int year = iGregorianChronology.year().get(instant);
-                            if (year <= 0) {
-                                instant = iGregorianChronology.year().add(instant, -1);
-                            }
+                // Only adjust if gap fully crossed.
+                if ((instant < iCutover) && (instant + iGapDuration < iCutover)) {
+                    if (iConvertByWeekyear) {
+                        int wyear = iGregorianChronology.weekyear().get(instant);
+                        if (wyear <= 0) {
+                            instant = iGregorianChronology.weekyear().add(instant, -1);
                         }
-                        instant = gregorianToJulian(instant);
+                    } else {
+                        int year = iGregorianChronology.year().get(instant);
+                        if (year <= 0) {
+                            instant = iGregorianChronology.year().add(instant, -1);
+                        }
                     }
+                    instant = gregorianToJulian(instant);
                 }
             } else {
                 instant = iJulianField.add(instant, value);
-                if (instant >= iCutover) {
-                    // Only adjust if gap fully crossed.
-                    if (instant - iGapDuration >= iCutover) {
-                        // no special handling for year zero as cutover always after year zero
-                        instant = julianToGregorian(instant);
-                    }
+                // Only adjust if gap fully crossed.
+                if ((instant >= iCutover) && (instant - iGapDuration >= iCutover)) {
+                    // no special handling for year zero as cutover always after year zero
+                    instant = julianToGregorian(instant);
                 }
             }
             return instant;
@@ -1026,31 +1012,27 @@ public final class GJChronology extends AssembledChronology {
         public long add(long instant, long value) {
             if (instant >= iCutover) {
                 instant = iGregorianField.add(instant, value);
-                if (instant < iCutover) {
-                    // Only adjust if gap fully crossed.
-                    if (instant + iGapDuration < iCutover) {
-                        if (iConvertByWeekyear) {
-                            int wyear = iGregorianChronology.weekyear().get(instant);
-                            if (wyear <= 0) {
-                                instant = iGregorianChronology.weekyear().add(instant, -1);
-                            }
-                        } else {
-                            int year = iGregorianChronology.year().get(instant);
-                            if (year <= 0) {
-                                instant = iGregorianChronology.year().add(instant, -1);
-                            }
+                // Only adjust if gap fully crossed.
+                if ((instant < iCutover) && (instant + iGapDuration < iCutover)) {
+                    if (iConvertByWeekyear) {
+                        int wyear = iGregorianChronology.weekyear().get(instant);
+                        if (wyear <= 0) {
+                            instant = iGregorianChronology.weekyear().add(instant, -1);
                         }
-                        instant = gregorianToJulian(instant);
+                    } else {
+                        int year = iGregorianChronology.year().get(instant);
+                        if (year <= 0) {
+                            instant = iGregorianChronology.year().add(instant, -1);
+                        }
                     }
+                    instant = gregorianToJulian(instant);
                 }
             } else {
                 instant = iJulianField.add(instant, value);
-                if (instant >= iCutover) {
-                    // Only adjust if gap fully crossed.
-                    if (instant - iGapDuration >= iCutover) {
-                        // no special handling for year zero as cutover always after year zero
-                        instant = julianToGregorian(instant);
-                    }
+                // Only adjust if gap fully crossed.
+                if ((instant >= iCutover) && (instant - iGapDuration >= iCutover)) {
+                    // no special handling for year zero as cutover always after year zero
+                    instant = julianToGregorian(instant);
                 }
             }
             return instant;

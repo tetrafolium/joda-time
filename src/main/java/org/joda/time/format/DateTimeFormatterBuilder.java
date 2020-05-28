@@ -2295,10 +2295,8 @@ public class DateTimeFormatterBuilder {
             parseLookup = (parseLookup != null ? parseLookup : DateTimeUtils.getDefaultTimeZoneNames());
             String matched = null;
             for (String name : parseLookup.keySet()) {
-                if (csStartsWith(text, position, name)) {
-                    if (matched == null || name.length() > matched.length()) {
-                        matched = name;
-                    }
+                if ((csStartsWith(text, position, name)) && (matched == null || name.length() > matched.length())) {
+                    matched = name;
                 }
             }
             if (matched != null) {
