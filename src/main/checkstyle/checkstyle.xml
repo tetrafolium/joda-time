@@ -103,6 +103,11 @@
       <property name="onCommentFormat" value="CSON"/>
     </module>
   </module>
+  <module name="SuppressWithNearbyCommentFilter">
+    <property name="commentFormat" value="CSIGNORE"/>
+    <property name="checkFormat" value=".*"/>
+    <property name="checkC" value="false"/>
+  </module>
 
   <!-- Header inlined due to m2e -->
   <module name="RegexpHeader">
@@ -114,9 +119,4 @@
     <property name="severity" value="error"/>
   </module>
   <module name="NewlineAtEndOfFile"/>
-  <module name="SuppressWithNearbyCommentFilter">
-    <property name="commentFormat" value="CSIGNORE"/>
-    <property name="checkFormat" value=".*"/>
-    <property name="checkC" value="false"/>
-  </module>
 </module>
