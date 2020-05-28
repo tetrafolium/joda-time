@@ -3,6 +3,13 @@
 
 <module name="Checker">
   <property name="severity" value="warning"/>
+
+  <module name="LineLength">
+    <property name="ignorePattern" value="^ *\* *[^ ]+$"/>
+    <property name="max" value="200"/>
+    <property name="tabWidth" value="2"/>
+  </module>
+
   <module name="TreeWalker">
     <property name="tabWidth" value="4"/>
     <!-- removed at Release 8.2
@@ -34,11 +41,6 @@
     </module>
     <module name="JavadocVariable">
       <property name="scope" value="protected"/>
-    </module>
-    <module name="LineLength">
-      <property name="ignorePattern" value="^ *\* *[^ ]+$"/>
-      <property name="max" value="200"/>
-      <property name="tabWidth" value="2"/>
     </module>
     <module name="LocalFinalVariableName"/>
     <module name="LocalVariableName"/>
