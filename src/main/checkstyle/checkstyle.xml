@@ -97,15 +97,17 @@
     <module name="ArrayTypeStyle">
       <property name="severity" value="error"/>
     </module>
+
+    <module name="SuppressionCommentFilter">
+      <property name="offCommentFormat" value="CSOFF"/>
+      <property name="onCommentFormat" value="CSON"/>
+    </module>
   </module>
+
   <!-- Header inlined due to m2e -->
   <module name="RegexpHeader">
     <property name="header" value="^/\*[*]?\n^ \*  Copyright 200[0-9]([-](20[01][0-9]))? Stephen Colebourne"/>
     <property name="fileExtensions" value="java"/>
-  </module>
-  <module name="SuppressionCommentFilter">
-    <property name="offCommentFormat" value="CSOFF"/>
-    <property name="onCommentFormat" value="CSON"/>
   </module>
   <module name="FileTabCharacter">
     <property name="eachLine" value="true"/>
