@@ -181,7 +181,7 @@ public class TestUnsupportedDateTimeField extends TestCase {
         // add(ReadablePartial instant, int fieldIndex, int[] values, int
         // valueToAdd)
         try {
-            fieldOne.add(localTime, 0, new int[] { 0, 100 }, 100);
+            fieldOne.add(localTime, 0, new int[] {0, 100 }, 100);
             assertTrue(false);
         } catch (UnsupportedOperationException e) {
             assertTrue(true);
@@ -196,7 +196,7 @@ public class TestUnsupportedDateTimeField extends TestCase {
         // addWrapField(ReadablePartial instant, int fieldIndex, int[] values,
         // int valueToAdd)
         try {
-            fieldOne.addWrapField(localTime, 0, new int[] { 0, 100 }, 100);
+            fieldOne.addWrapField(localTime, 0, new int[] {0, 100 }, 100);
             assertTrue(false);
         } catch (UnsupportedOperationException e) {
             assertTrue(true);
@@ -204,7 +204,7 @@ public class TestUnsupportedDateTimeField extends TestCase {
         // addWrapPartial(ReadablePartial instant, int fieldIndex, int[] values,
         // int valueToAdd)
         try {
-            fieldOne.addWrapPartial(localTime, 0, new int[] { 0, 100 }, 100);
+            fieldOne.addWrapPartial(localTime, 0, new int[] {0, 100 }, 100);
             assertTrue(false);
         } catch (UnsupportedOperationException e) {
             assertTrue(true);
@@ -368,7 +368,7 @@ public class TestUnsupportedDateTimeField extends TestCase {
         // is unsupported and should always thrown an
         // UnsupportedOperationException
         try {
-            fieldOne.getMaximumValue(localTime, new int[] { 0 });
+            fieldOne.getMaximumValue(localTime, new int[] {0 });
             assertTrue(false);
         } catch (UnsupportedOperationException e) {
             assertTrue(true);
@@ -406,7 +406,7 @@ public class TestUnsupportedDateTimeField extends TestCase {
         // int[] values) is unsupported
         // and should always thrown an UnsupportedOperationException
         try {
-            fieldOne.getMinimumValue(localTime, new int[] { 0 });
+            fieldOne.getMinimumValue(localTime, new int[] {0 });
             assertTrue(false);
         } catch (UnsupportedOperationException e) {
             assertTrue(true);
@@ -517,7 +517,7 @@ public class TestUnsupportedDateTimeField extends TestCase {
         // int newValue) is unsupported and
         // should always thrown an UnsupportedOperationException
         try {
-            fieldOne.set(localTime, 0, new int[] { 0 }, 10000);
+            fieldOne.set(localTime, 0, new int[] {0 }, 10000);
             assertTrue(false);
         } catch (UnsupportedOperationException e) {
             assertTrue(true);
@@ -530,7 +530,7 @@ public class TestUnsupportedDateTimeField extends TestCase {
         // Locale locale) is unsupported and
         // should always thrown an UnsupportedOperationException
         try {
-            fieldOne.set(localTime, 0, new int[] { 0 },
+            fieldOne.set(localTime, 0, new int[] {0 },
                     "Unsupported Operation", Locale.getDefault());
             assertTrue(false);
         } catch (UnsupportedOperationException e) {

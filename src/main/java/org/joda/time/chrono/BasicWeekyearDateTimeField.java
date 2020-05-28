@@ -131,8 +131,8 @@ final class BasicWeekyearDateTimeField extends ImpreciseDateTimeField {
         //
         // Do nothing if no real change is requested.
         //
-        int thisWeekyear = get( instant );
-        if ( thisWeekyear == year ) {
+        int thisWeekyear = get(instant);
+        if (thisWeekyear == year) {
             return instant;
         }
         //
@@ -142,8 +142,8 @@ final class BasicWeekyearDateTimeField extends ImpreciseDateTimeField {
         //
         // Calculate the maximum weeks in the target year.
         //
-        int weeksInFromYear = iChronology.getWeeksInYear( thisWeekyear );
-        int weeksInToYear = iChronology.getWeeksInYear( year );
+        int weeksInFromYear = iChronology.getWeeksInYear(thisWeekyear);
+        int weeksInToYear = iChronology.getWeeksInYear(year);
         int maxOutWeeks = (weeksInToYear < weeksInFromYear) ?
             weeksInToYear : weeksInFromYear;
         //
@@ -153,7 +153,7 @@ final class BasicWeekyearDateTimeField extends ImpreciseDateTimeField {
         // to the maximum possible.
         //
         int setToWeek = iChronology.getWeekOfWeekyear(instant);
-        if ( setToWeek > maxOutWeeks ) {
+        if (setToWeek > maxOutWeeks) {
             setToWeek = maxOutWeeks;
         }
         //
@@ -166,20 +166,20 @@ final class BasicWeekyearDateTimeField extends ImpreciseDateTimeField {
         // Note - we cannot currently call ourself, so we just call
         // set for the year.  This at least gets us close.
         //
-        workInstant = iChronology.setYear( workInstant, year );
+        workInstant = iChronology.setYear(workInstant, year);
         //
         // Calculate the weekyear number for the get close to value
         // (which might not be equal to the year just set).
         //
-        int workWoyYear = get( workInstant );
+        int workWoyYear = get(workInstant);
 
         //
         // At most we are off by one year, which can be "fixed" by
         // adding/subtracting a week.
         //
-        if ( workWoyYear < year ) {
+        if (workWoyYear < year) {
             workInstant += DateTimeConstants.MILLIS_PER_WEEK;
-        } else if ( workWoyYear > year ) {
+        } else if (workWoyYear > year) {
             workInstant -= DateTimeConstants.MILLIS_PER_WEEK;
         }
         //
@@ -198,7 +198,7 @@ final class BasicWeekyearDateTimeField extends ImpreciseDateTimeField {
         //
         // Note: This works fine, but it ideally shouldn't invoke other
         // fields from within a field.
-        workInstant = iChronology.dayOfWeek().set( workInstant, thisDow );
+        workInstant = iChronology.dayOfWeek().set(workInstant, thisDow);
         //
         // Return result.
         //

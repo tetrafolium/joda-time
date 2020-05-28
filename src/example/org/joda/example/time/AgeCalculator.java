@@ -221,8 +221,7 @@ public class AgeCalculator extends JFrame {
             for (int i=0; i<iFieldSets.length; i++) {
                 iFieldSets[i].updateResults(minuend, subtrahend);
             }
-        }
-        catch (IllegalArgumentException e) {
+        } catch (IllegalArgumentException e) {
             for (int i=0; i<iFieldSets.length; i++) {
                 iFieldSets[i].setResultsText("");
             }

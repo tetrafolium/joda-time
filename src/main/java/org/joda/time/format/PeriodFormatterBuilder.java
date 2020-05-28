@@ -1084,7 +1084,7 @@ public class PeriodFormatterBuilder {
         }
 
         public String[] getAffixes() {
-            return new String[] { iText };
+            return new String[] {iText };
         }
     }
 
@@ -1170,7 +1170,7 @@ public class PeriodFormatterBuilder {
         }
 
         public String[] getAffixes() {
-            return new String[] { iSingularText, iPluralText };
+            return new String[] {iSingularText, iPluralText };
         }
     }
 

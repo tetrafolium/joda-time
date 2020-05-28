@@ -428,7 +428,7 @@ public class TestPeriodFormatterBuilder extends TestCase {
     }
 
     public void testFormatPrefixRegEx1() {
-        PeriodFormatter f = builder.appendPrefix(new String[] { "^1$", "^.*$" }, new String[] { "Year:", "Years:" }).appendYears()
+        PeriodFormatter f = builder.appendPrefix(new String[] {"^1$", "^.*$" }, new String[] {"Year:", "Years:" }).appendYears()
                 .toFormatter();
         assertEquals("Year:1", f.print(PERIOD));
         assertEquals(6, f.getPrinter().calculatePrintedLength(PERIOD, null));
@@ -441,7 +441,7 @@ public class TestPeriodFormatterBuilder extends TestCase {
     }
 
     public void testFormatPrefixRegEx2() {
-        PeriodFormatter f = builder.appendPrefix(new String[] { "^1$", "^.*$" }, new String[] { "Hour:", "Hours:" }).appendHours()
+        PeriodFormatter f = builder.appendPrefix(new String[] {"^1$", "^.*$" }, new String[] {"Hour:", "Hours:" }).appendHours()
                 .toFormatter();
         assertEquals("Hours:5", f.print(PERIOD));
         assertEquals(7, f.getPrinter().calculatePrintedLength(PERIOD, null));
@@ -506,7 +506,7 @@ public class TestPeriodFormatterBuilder extends TestCase {
     public void testFormatPrefixComposite1() {
         PeriodFormatter f = builder.appendPrefix("d")
                 .appendPrefix("a", "ay")
-                .appendPrefix(new String[] { "^1$", "^.*$" }, new String[] { "y:", "s:" })
+                .appendPrefix(new String[] {"^1$", "^.*$" }, new String[] {"y:", "s:" })
                 .appendDays().toFormatter();
         String oneMS = Period.days(2).toString(f);
         assertEquals("days:2", oneMS);
@@ -642,7 +642,7 @@ public class TestPeriodFormatterBuilder extends TestCase {
     }
 
     public void testFormatSuffixRegEx1() {
-        PeriodFormatter f = builder.appendYears().appendSuffix(new String[] { "^1$", "^2$" }, new String[] { " year", " years" })
+        PeriodFormatter f = builder.appendYears().appendSuffix(new String[] {"^1$", "^2$" }, new String[] {" year", " years" })
                 .toFormatter();
         assertEquals("1 year", f.print(PERIOD));
         assertEquals(6, f.getPrinter().calculatePrintedLength(PERIOD, null));
@@ -660,7 +660,7 @@ public class TestPeriodFormatterBuilder extends TestCase {
     }
 
     public void testFormatSuffixRegEx2() {
-        PeriodFormatter f = builder.appendHours().appendSuffix(new String[] { "^1$", "^2$" }, new String[] { " hour", " hours" }).toFormatter();
+        PeriodFormatter f = builder.appendHours().appendSuffix(new String[] {"^1$", "^2$" }, new String[] {" hour", " hours" }).toFormatter();
         assertEquals("5 hours", f.print(PERIOD));
         assertEquals(7, f.getPrinter().calculatePrintedLength(PERIOD, null));
         assertEquals(1, f.getPrinter().countFieldsToPrint(PERIOD, Integer.MAX_VALUE, null));
@@ -706,7 +706,7 @@ public class TestPeriodFormatterBuilder extends TestCase {
 
     public void testFormatSuffixRegEx4() {
         try {
-            builder.appendSuffix(new String[] { "^1$", "^.*$" }, new String[] { " hour", " hours" });
+            builder.appendSuffix(new String[] {"^1$", "^.*$" }, new String[] {" hour", " hours" });
             fail();
         } catch (IllegalStateException ex) {
         }
@@ -736,7 +736,7 @@ public class TestPeriodFormatterBuilder extends TestCase {
     public void testFormatSuffixComposite1() {
         PeriodFormatter f = builder.appendDays().appendSuffix("d")
                 .appendSuffix("a", "ay")
-                .appendSuffix(new String[] { "^1$", "^.*$" }, new String[] { "y", "s" })
+                .appendSuffix(new String[] {"^1$", "^.*$" }, new String[] {"y", "s" })
                 .toFormatter();
         String oneMS = Period.days(2).toString(f);
         assertEquals("2days", oneMS);

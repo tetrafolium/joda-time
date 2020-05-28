@@ -373,13 +373,13 @@ public abstract class AssembledChronology extends BaseChronology {
                 ((iHourOfDay      == iBase.hourOfDay()      &&
                   iMinuteOfHour   == iBase.minuteOfHour()   &&
                   iSecondOfMinute == iBase.secondOfMinute() &&
-                  iMillisOfSecond == iBase.millisOfSecond()   ) ? 1 : 0) |
+                  iMillisOfSecond == iBase.millisOfSecond()) ? 1 : 0) |
 
                 ((iMillisOfDay == iBase.millisOfDay()) ? 2 : 0) |
 
                 ((iYear        == iBase.year()        &&
                   iMonthOfYear == iBase.monthOfYear() &&
-                  iDayOfMonth  == iBase.dayOfMonth()    ) ? 4 : 0);
+                  iDayOfMonth  == iBase.dayOfMonth()) ? 4 : 0);
         }
 
         iBaseFlags = flags;

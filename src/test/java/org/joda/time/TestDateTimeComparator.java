@@ -305,23 +305,23 @@ public class TestDateTimeComparator extends TestCase {
      * Test all basic comparator operation with DateTime objects.
      */
     public void testBasicComps1() {
-        aDateTime = new DateTime( System.currentTimeMillis(), DateTimeZone.UTC );
-        bDateTime = new DateTime( aDateTime.getMillis(), DateTimeZone.UTC );
-        assertEquals( "getMillis", aDateTime.getMillis(),
-            bDateTime.getMillis() );
-        assertEquals( "MILLIS", 0, cMillis.compare( aDateTime, bDateTime ) );
-        assertEquals( "SECOND", 0, cSecond.compare( aDateTime, bDateTime ) );
-        assertEquals( "MINUTE", 0, cMinute.compare( aDateTime, bDateTime ) );
-        assertEquals( "HOUR", 0, cHour.compare( aDateTime, bDateTime ) );
-        assertEquals( "DOW", 0, cDayOfWeek.compare( aDateTime, bDateTime ) );
-        assertEquals( "DOM", 0, cDayOfMonth.compare( aDateTime, bDateTime ) );
-        assertEquals( "DOY", 0, cDayOfYear.compare( aDateTime, bDateTime ) );
-        assertEquals( "WOW", 0, cWeekOfWeekyear.compare( aDateTime, bDateTime ) );
-        assertEquals( "WY", 0, cWeekyear.compare( aDateTime, bDateTime ) );
-        assertEquals( "MONTH", 0, cMonth.compare( aDateTime, bDateTime ) );
-        assertEquals( "YEAR", 0, cYear.compare( aDateTime, bDateTime ) );
-        assertEquals( "DATE", 0, cDate.compare( aDateTime, bDateTime ) );
-        assertEquals( "TIME", 0, cTime.compare( aDateTime, bDateTime ) );
+        aDateTime = new DateTime(System.currentTimeMillis(), DateTimeZone.UTC);
+        bDateTime = new DateTime(aDateTime.getMillis(), DateTimeZone.UTC);
+        assertEquals("getMillis", aDateTime.getMillis(),
+            bDateTime.getMillis());
+        assertEquals("MILLIS", 0, cMillis.compare(aDateTime, bDateTime));
+        assertEquals("SECOND", 0, cSecond.compare(aDateTime, bDateTime));
+        assertEquals("MINUTE", 0, cMinute.compare(aDateTime, bDateTime));
+        assertEquals("HOUR", 0, cHour.compare(aDateTime, bDateTime));
+        assertEquals("DOW", 0, cDayOfWeek.compare(aDateTime, bDateTime));
+        assertEquals("DOM", 0, cDayOfMonth.compare(aDateTime, bDateTime));
+        assertEquals("DOY", 0, cDayOfYear.compare(aDateTime, bDateTime));
+        assertEquals("WOW", 0, cWeekOfWeekyear.compare(aDateTime, bDateTime));
+        assertEquals("WY", 0, cWeekyear.compare(aDateTime, bDateTime));
+        assertEquals("MONTH", 0, cMonth.compare(aDateTime, bDateTime));
+        assertEquals("YEAR", 0, cYear.compare(aDateTime, bDateTime));
+        assertEquals("DATE", 0, cDate.compare(aDateTime, bDateTime));
+        assertEquals("TIME", 0, cTime.compare(aDateTime, bDateTime));
     }   // end of testBasicComps
 
 
@@ -329,91 +329,91 @@ public class TestDateTimeComparator extends TestCase {
      * Test all basic comparator operation with ReadableInstant objects.
      */
     public void testBasicComps2() {
-        ReadableInstant aDateTime = new DateTime( System.currentTimeMillis(), DateTimeZone.UTC );
-        ReadableInstant bDateTime = new DateTime( aDateTime.getMillis(), DateTimeZone.UTC );
-        assertEquals( "getMillis", aDateTime.getMillis(),
-            bDateTime.getMillis() );
-        assertEquals( "MILLIS", 0, cMillis.compare( aDateTime, bDateTime ) );
-        assertEquals( "SECOND", 0, cSecond.compare( aDateTime, bDateTime ) );
-        assertEquals( "MINUTE", 0, cMinute.compare( aDateTime, bDateTime ) );
-        assertEquals( "HOUR", 0, cHour.compare( aDateTime, bDateTime ) );
-        assertEquals( "DOW", 0, cDayOfWeek.compare( aDateTime, bDateTime ) );
-        assertEquals( "DOM", 0, cDayOfMonth.compare( aDateTime, bDateTime ) );
-        assertEquals( "DOY", 0, cDayOfYear.compare( aDateTime, bDateTime ) );
-        assertEquals( "WOW", 0, cWeekOfWeekyear.compare( aDateTime, bDateTime ) );
-        assertEquals( "WY", 0, cWeekyear.compare( aDateTime, bDateTime ) );
-        assertEquals( "MONTH", 0, cMonth.compare( aDateTime, bDateTime ) );
-        assertEquals( "YEAR", 0, cYear.compare( aDateTime, bDateTime ) );
-        assertEquals( "DATE", 0, cDate.compare( aDateTime, bDateTime ) );
-        assertEquals( "TIME", 0, cTime.compare( aDateTime, bDateTime ) );
+        ReadableInstant aDateTime = new DateTime(System.currentTimeMillis(), DateTimeZone.UTC);
+        ReadableInstant bDateTime = new DateTime(aDateTime.getMillis(), DateTimeZone.UTC);
+        assertEquals("getMillis", aDateTime.getMillis(),
+            bDateTime.getMillis());
+        assertEquals("MILLIS", 0, cMillis.compare(aDateTime, bDateTime));
+        assertEquals("SECOND", 0, cSecond.compare(aDateTime, bDateTime));
+        assertEquals("MINUTE", 0, cMinute.compare(aDateTime, bDateTime));
+        assertEquals("HOUR", 0, cHour.compare(aDateTime, bDateTime));
+        assertEquals("DOW", 0, cDayOfWeek.compare(aDateTime, bDateTime));
+        assertEquals("DOM", 0, cDayOfMonth.compare(aDateTime, bDateTime));
+        assertEquals("DOY", 0, cDayOfYear.compare(aDateTime, bDateTime));
+        assertEquals("WOW", 0, cWeekOfWeekyear.compare(aDateTime, bDateTime));
+        assertEquals("WY", 0, cWeekyear.compare(aDateTime, bDateTime));
+        assertEquals("MONTH", 0, cMonth.compare(aDateTime, bDateTime));
+        assertEquals("YEAR", 0, cYear.compare(aDateTime, bDateTime));
+        assertEquals("DATE", 0, cDate.compare(aDateTime, bDateTime));
+        assertEquals("TIME", 0, cTime.compare(aDateTime, bDateTime));
     }   // end of testBasicComps
 
     /**
      * Test all basic comparator operation with java Date objects.
      */
     public void testBasicComps3() {
-        Date aDateTime
-            = new Date( System.currentTimeMillis() );
-        Date bDateTime
-            = new Date( aDateTime.getTime() );
-        assertEquals( "MILLIS", 0, cMillis.compare( aDateTime, bDateTime ) );
-        assertEquals( "SECOND", 0, cSecond.compare( aDateTime, bDateTime ) );
-        assertEquals( "MINUTE", 0, cMinute.compare( aDateTime, bDateTime ) );
-        assertEquals( "HOUR", 0, cHour.compare( aDateTime, bDateTime ) );
-        assertEquals( "DOW", 0, cDayOfWeek.compare( aDateTime, bDateTime ) );
-        assertEquals( "DOM", 0, cDayOfMonth.compare( aDateTime, bDateTime ) );
-        assertEquals( "DOY", 0, cDayOfYear.compare( aDateTime, bDateTime ) );
-        assertEquals( "WOW", 0, cWeekOfWeekyear.compare( aDateTime, bDateTime ) );
-        assertEquals( "WY", 0, cWeekyear.compare( aDateTime, bDateTime ) );
-        assertEquals( "MONTH", 0, cMonth.compare( aDateTime, bDateTime ) );
-        assertEquals( "YEAR", 0, cYear.compare( aDateTime, bDateTime ) );
-        assertEquals( "DATE", 0, cDate.compare( aDateTime, bDateTime ) );
-        assertEquals( "TIME", 0, cTime.compare( aDateTime, bDateTime ) );
+        Date aDateTime =
+            new Date(System.currentTimeMillis());
+        Date bDateTime =
+            new Date(aDateTime.getTime());
+        assertEquals("MILLIS", 0, cMillis.compare(aDateTime, bDateTime));
+        assertEquals("SECOND", 0, cSecond.compare(aDateTime, bDateTime));
+        assertEquals("MINUTE", 0, cMinute.compare(aDateTime, bDateTime));
+        assertEquals("HOUR", 0, cHour.compare(aDateTime, bDateTime));
+        assertEquals("DOW", 0, cDayOfWeek.compare(aDateTime, bDateTime));
+        assertEquals("DOM", 0, cDayOfMonth.compare(aDateTime, bDateTime));
+        assertEquals("DOY", 0, cDayOfYear.compare(aDateTime, bDateTime));
+        assertEquals("WOW", 0, cWeekOfWeekyear.compare(aDateTime, bDateTime));
+        assertEquals("WY", 0, cWeekyear.compare(aDateTime, bDateTime));
+        assertEquals("MONTH", 0, cMonth.compare(aDateTime, bDateTime));
+        assertEquals("YEAR", 0, cYear.compare(aDateTime, bDateTime));
+        assertEquals("DATE", 0, cDate.compare(aDateTime, bDateTime));
+        assertEquals("TIME", 0, cTime.compare(aDateTime, bDateTime));
     }   // end of testBasicComps
 
     /**
      * Test all basic comparator operation with Long objects.
      */
     public void testBasicComps4() {
-        Long aDateTime
-            = new Long( System.currentTimeMillis() );
-        Long bDateTime
-            = new Long( aDateTime.longValue() );
-        assertEquals( "MILLIS", 0, cMillis.compare( aDateTime, bDateTime ) );
-        assertEquals( "SECOND", 0, cSecond.compare( aDateTime, bDateTime ) );
-        assertEquals( "MINUTE", 0, cMinute.compare( aDateTime, bDateTime ) );
-        assertEquals( "HOUR", 0, cHour.compare( aDateTime, bDateTime ) );
-        assertEquals( "DOW", 0, cDayOfWeek.compare( aDateTime, bDateTime ) );
-        assertEquals( "DOM", 0, cDayOfMonth.compare( aDateTime, bDateTime ) );
-        assertEquals( "DOY", 0, cDayOfYear.compare( aDateTime, bDateTime ) );
-        assertEquals( "WOW", 0, cWeekOfWeekyear.compare( aDateTime, bDateTime ) );
-        assertEquals( "WY", 0, cWeekyear.compare( aDateTime, bDateTime ) );
-        assertEquals( "MONTH", 0, cMonth.compare( aDateTime, bDateTime ) );
-        assertEquals( "YEAR", 0, cYear.compare( aDateTime, bDateTime ) );
-        assertEquals( "DATE", 0, cDate.compare( aDateTime, bDateTime ) );
-        assertEquals( "TIME", 0, cTime.compare( aDateTime, bDateTime ) );
+        Long aDateTime =
+            new Long(System.currentTimeMillis());
+        Long bDateTime =
+            new Long(aDateTime.longValue());
+        assertEquals("MILLIS", 0, cMillis.compare(aDateTime, bDateTime));
+        assertEquals("SECOND", 0, cSecond.compare(aDateTime, bDateTime));
+        assertEquals("MINUTE", 0, cMinute.compare(aDateTime, bDateTime));
+        assertEquals("HOUR", 0, cHour.compare(aDateTime, bDateTime));
+        assertEquals("DOW", 0, cDayOfWeek.compare(aDateTime, bDateTime));
+        assertEquals("DOM", 0, cDayOfMonth.compare(aDateTime, bDateTime));
+        assertEquals("DOY", 0, cDayOfYear.compare(aDateTime, bDateTime));
+        assertEquals("WOW", 0, cWeekOfWeekyear.compare(aDateTime, bDateTime));
+        assertEquals("WY", 0, cWeekyear.compare(aDateTime, bDateTime));
+        assertEquals("MONTH", 0, cMonth.compare(aDateTime, bDateTime));
+        assertEquals("YEAR", 0, cYear.compare(aDateTime, bDateTime));
+        assertEquals("DATE", 0, cDate.compare(aDateTime, bDateTime));
+        assertEquals("TIME", 0, cTime.compare(aDateTime, bDateTime));
     }   // end of testBasicComps
 
     /**
      * Test all basic comparator operation with Calendar objects.
      */
     public void testBasicComps5() {
-        Calendar aDateTime
-            = Calendar.getInstance();   // right now
+        Calendar aDateTime =
+            Calendar.getInstance();   // right now
         Calendar bDateTime = aDateTime;
-        assertEquals( "MILLIS", 0, cMillis.compare( aDateTime, bDateTime ) );
-        assertEquals( "SECOND", 0, cSecond.compare( aDateTime, bDateTime ) );
-        assertEquals( "MINUTE", 0, cMinute.compare( aDateTime, bDateTime ) );
-        assertEquals( "HOUR", 0, cHour.compare( aDateTime, bDateTime ) );
-        assertEquals( "DOW", 0, cDayOfWeek.compare( aDateTime, bDateTime ) );
-        assertEquals( "DOM", 0, cDayOfMonth.compare( aDateTime, bDateTime ) );
-        assertEquals( "DOY", 0, cDayOfYear.compare( aDateTime, bDateTime ) );
-        assertEquals( "WOW", 0, cWeekOfWeekyear.compare( aDateTime, bDateTime ) );
-        assertEquals( "WY", 0, cWeekyear.compare( aDateTime, bDateTime ) );
-        assertEquals( "MONTH", 0, cMonth.compare( aDateTime, bDateTime ) );
-        assertEquals( "YEAR", 0, cYear.compare( aDateTime, bDateTime ) );
-        assertEquals( "DATE", 0, cDate.compare( aDateTime, bDateTime ) );
-        assertEquals( "TIME", 0, cTime.compare( aDateTime, bDateTime ) );
+        assertEquals("MILLIS", 0, cMillis.compare(aDateTime, bDateTime));
+        assertEquals("SECOND", 0, cSecond.compare(aDateTime, bDateTime));
+        assertEquals("MINUTE", 0, cMinute.compare(aDateTime, bDateTime));
+        assertEquals("HOUR", 0, cHour.compare(aDateTime, bDateTime));
+        assertEquals("DOW", 0, cDayOfWeek.compare(aDateTime, bDateTime));
+        assertEquals("DOM", 0, cDayOfMonth.compare(aDateTime, bDateTime));
+        assertEquals("DOY", 0, cDayOfYear.compare(aDateTime, bDateTime));
+        assertEquals("WOW", 0, cWeekOfWeekyear.compare(aDateTime, bDateTime));
+        assertEquals("WY", 0, cWeekyear.compare(aDateTime, bDateTime));
+        assertEquals("MONTH", 0, cMonth.compare(aDateTime, bDateTime));
+        assertEquals("YEAR", 0, cYear.compare(aDateTime, bDateTime));
+        assertEquals("DATE", 0, cDate.compare(aDateTime, bDateTime));
+        assertEquals("TIME", 0, cTime.compare(aDateTime, bDateTime));
     }   // end of testBasicComps
 
 
@@ -421,56 +421,56 @@ public class TestDateTimeComparator extends TestCase {
      * Test unequal comparisons with millis of second comparators.
      */
     public void testMillis() {
-        aDateTime = new DateTime( System.currentTimeMillis(), DateTimeZone.UTC );
-        bDateTime = new DateTime( aDateTime.getMillis() + 1, DateTimeZone.UTC );
-        assertEquals( "MillisM1", -1, cMillis.compare( aDateTime, bDateTime ) );
-        assertEquals( "MillisP1", 1, cMillis.compare( bDateTime, aDateTime ) );
+        aDateTime = new DateTime(System.currentTimeMillis(), DateTimeZone.UTC);
+        bDateTime = new DateTime(aDateTime.getMillis() + 1, DateTimeZone.UTC);
+        assertEquals("MillisM1", -1, cMillis.compare(aDateTime, bDateTime));
+        assertEquals("MillisP1", 1, cMillis.compare(bDateTime, aDateTime));
     }   // end of testMillis
 
     /**
      * Test unequal comparisons with second comparators.
      */
     public void testSecond() {
-        aDateTime = getADate( "1969-12-31T23:59:58" );
-        bDateTime = getADate( "1969-12-31T23:50:59" );
-        assertEquals( "SecondM1a", -1, cSecond.compare( aDateTime, bDateTime ) );
-        assertEquals( "SecondP1a", 1, cSecond.compare( bDateTime, aDateTime ) );
-        aDateTime = getADate( "1970-01-01T00:00:00" );
-        bDateTime = getADate( "1970-01-01T00:00:01" );
-        assertEquals( "SecondM1b", -1, cSecond.compare( aDateTime, bDateTime ) );
-        assertEquals( "SecondP1b", 1, cSecond.compare( bDateTime, aDateTime ) );
+        aDateTime = getADate("1969-12-31T23:59:58");
+        bDateTime = getADate("1969-12-31T23:50:59");
+        assertEquals("SecondM1a", -1, cSecond.compare(aDateTime, bDateTime));
+        assertEquals("SecondP1a", 1, cSecond.compare(bDateTime, aDateTime));
+        aDateTime = getADate("1970-01-01T00:00:00");
+        bDateTime = getADate("1970-01-01T00:00:01");
+        assertEquals("SecondM1b", -1, cSecond.compare(aDateTime, bDateTime));
+        assertEquals("SecondP1b", 1, cSecond.compare(bDateTime, aDateTime));
     }   // end of testSecond
 
     /**
      * Test unequal comparisons with minute comparators.
      */
     public void testMinute() {
-        aDateTime = getADate( "1969-12-31T23:58:00" );
-        bDateTime = getADate( "1969-12-31T23:59:00" );
-        assertEquals( "MinuteM1a", -1, cMinute.compare( aDateTime, bDateTime ) );
-        assertEquals( "MinuteP1a", 1, cMinute.compare( bDateTime, aDateTime ) );
-        aDateTime = getADate( "1970-01-01T00:00:00" );
-        bDateTime = getADate( "1970-01-01T00:01:00" );
-        assertEquals( "MinuteM1b", -1, cMinute.compare( aDateTime, bDateTime ) );
-        assertEquals( "MinuteP1b", 1, cMinute.compare( bDateTime, aDateTime ) );
+        aDateTime = getADate("1969-12-31T23:58:00");
+        bDateTime = getADate("1969-12-31T23:59:00");
+        assertEquals("MinuteM1a", -1, cMinute.compare(aDateTime, bDateTime));
+        assertEquals("MinuteP1a", 1, cMinute.compare(bDateTime, aDateTime));
+        aDateTime = getADate("1970-01-01T00:00:00");
+        bDateTime = getADate("1970-01-01T00:01:00");
+        assertEquals("MinuteM1b", -1, cMinute.compare(aDateTime, bDateTime));
+        assertEquals("MinuteP1b", 1, cMinute.compare(bDateTime, aDateTime));
     }   // end of testMinute
 
     /**
      * Test unequal comparisons with hour comparators.
      */
     public void testHour() {
-        aDateTime = getADate( "1969-12-31T22:00:00" );
-        bDateTime = getADate( "1969-12-31T23:00:00" );
-        assertEquals( "HourM1a", -1, cHour.compare( aDateTime, bDateTime ) );
-        assertEquals( "HourP1a", 1, cHour.compare( bDateTime, aDateTime ) );
-        aDateTime = getADate( "1970-01-01T00:00:00" );
-        bDateTime = getADate( "1970-01-01T01:00:00" );
-        assertEquals( "HourM1b", -1, cHour.compare( aDateTime, bDateTime ) );
-        assertEquals( "HourP1b", 1, cHour.compare( bDateTime, aDateTime ) );
-        aDateTime = getADate( "1969-12-31T23:59:59" );
-        bDateTime = getADate( "1970-01-01T00:00:00" );
-        assertEquals( "HourP1c", 1, cHour.compare( aDateTime, bDateTime ) );
-        assertEquals( "HourM1c", -1, cHour.compare( bDateTime, aDateTime ) );
+        aDateTime = getADate("1969-12-31T22:00:00");
+        bDateTime = getADate("1969-12-31T23:00:00");
+        assertEquals("HourM1a", -1, cHour.compare(aDateTime, bDateTime));
+        assertEquals("HourP1a", 1, cHour.compare(bDateTime, aDateTime));
+        aDateTime = getADate("1970-01-01T00:00:00");
+        bDateTime = getADate("1970-01-01T01:00:00");
+        assertEquals("HourM1b", -1, cHour.compare(aDateTime, bDateTime));
+        assertEquals("HourP1b", 1, cHour.compare(bDateTime, aDateTime));
+        aDateTime = getADate("1969-12-31T23:59:59");
+        bDateTime = getADate("1970-01-01T00:00:00");
+        assertEquals("HourP1c", 1, cHour.compare(aDateTime, bDateTime));
+        assertEquals("HourM1c", -1, cHour.compare(bDateTime, aDateTime));
     }   // end of testHour
 
     /**
@@ -481,38 +481,38 @@ public class TestDateTimeComparator extends TestCase {
          * Dates chosen when I wrote the code, so I know what day of
          * the week it is.
          */
-        aDateTime = getADate( "2002-04-12T00:00:00" );
-        bDateTime = getADate( "2002-04-13T00:00:00" );
-        assertEquals( "DOWM1a", -1, cDayOfWeek.compare( aDateTime, bDateTime ) );
-        assertEquals( "DOWP1a", 1, cDayOfWeek.compare( bDateTime, aDateTime ) );
+        aDateTime = getADate("2002-04-12T00:00:00");
+        bDateTime = getADate("2002-04-13T00:00:00");
+        assertEquals("DOWM1a", -1, cDayOfWeek.compare(aDateTime, bDateTime));
+        assertEquals("DOWP1a", 1, cDayOfWeek.compare(bDateTime, aDateTime));
     }   // end of testDOW
 
     /**
      * Test unequal comparisons with day of month comparators.
      */
     public void testDOM() {
-        aDateTime = getADate( "2002-04-12T00:00:00" );
-        bDateTime = getADate( "2002-04-13T00:00:00" );
-        assertEquals( "DOMM1a", -1, cDayOfMonth.compare( aDateTime, bDateTime ) );
-        assertEquals( "DOMP1a", 1, cDayOfMonth.compare( bDateTime, aDateTime ) );
-        aDateTime = getADate( "2000-12-01T00:00:00" );
-        bDateTime = getADate( "1814-04-30T00:00:00" );
-        assertEquals( "DOMM1b", -1, cDayOfMonth.compare( aDateTime, bDateTime ) );
-        assertEquals( "DOMP1b", 1, cDayOfMonth.compare( bDateTime, aDateTime ) );
+        aDateTime = getADate("2002-04-12T00:00:00");
+        bDateTime = getADate("2002-04-13T00:00:00");
+        assertEquals("DOMM1a", -1, cDayOfMonth.compare(aDateTime, bDateTime));
+        assertEquals("DOMP1a", 1, cDayOfMonth.compare(bDateTime, aDateTime));
+        aDateTime = getADate("2000-12-01T00:00:00");
+        bDateTime = getADate("1814-04-30T00:00:00");
+        assertEquals("DOMM1b", -1, cDayOfMonth.compare(aDateTime, bDateTime));
+        assertEquals("DOMP1b", 1, cDayOfMonth.compare(bDateTime, aDateTime));
     }   // end of testDOM
 
     /**
      * Test unequal comparisons with day of year comparators.
      */
     public void testDOY() {
-        aDateTime = getADate( "2002-04-12T00:00:00" );
-        bDateTime = getADate( "2002-04-13T00:00:00" );
-        assertEquals( "DOYM1a", -1, cDayOfYear.compare( aDateTime, bDateTime ) );
-        assertEquals( "DOYP1a", 1, cDayOfYear.compare( bDateTime, aDateTime ) );
-        aDateTime = getADate( "2000-02-29T00:00:00" );
-        bDateTime = getADate( "1814-11-30T00:00:00" );
-        assertEquals( "DOYM1b", -1, cDayOfYear.compare( aDateTime, bDateTime ) );
-        assertEquals( "DOYP1b", 1, cDayOfYear.compare( bDateTime, aDateTime ) );
+        aDateTime = getADate("2002-04-12T00:00:00");
+        bDateTime = getADate("2002-04-13T00:00:00");
+        assertEquals("DOYM1a", -1, cDayOfYear.compare(aDateTime, bDateTime));
+        assertEquals("DOYP1a", 1, cDayOfYear.compare(bDateTime, aDateTime));
+        aDateTime = getADate("2000-02-29T00:00:00");
+        bDateTime = getADate("1814-11-30T00:00:00");
+        assertEquals("DOYM1b", -1, cDayOfYear.compare(aDateTime, bDateTime));
+        assertEquals("DOYP1b", 1, cDayOfYear.compare(bDateTime, aDateTime));
     }   // end of testDOY
 
     /**
@@ -520,18 +520,18 @@ public class TestDateTimeComparator extends TestCase {
      */
     public void testWOW() {
         // 1st week of year contains Jan 04.
-        aDateTime = getADate( "2000-01-04T00:00:00" );
-        bDateTime = getADate( "2000-01-11T00:00:00" );
-        assertEquals( "WOWM1a", -1,
-            cWeekOfWeekyear.compare( aDateTime, bDateTime ) );
-        assertEquals( "WOWP1a", 1,
-            cWeekOfWeekyear.compare( bDateTime, aDateTime ) );
-        aDateTime = getADate( "2000-01-04T00:00:00" );
-        bDateTime = getADate( "1999-12-31T00:00:00" );
-        assertEquals( "WOWM1b", -1,
-            cWeekOfWeekyear.compare( aDateTime, bDateTime ) );
-        assertEquals( "WOWP1b", 1,
-            cWeekOfWeekyear.compare( bDateTime, aDateTime ) );
+        aDateTime = getADate("2000-01-04T00:00:00");
+        bDateTime = getADate("2000-01-11T00:00:00");
+        assertEquals("WOWM1a", -1,
+            cWeekOfWeekyear.compare(aDateTime, bDateTime));
+        assertEquals("WOWP1a", 1,
+            cWeekOfWeekyear.compare(bDateTime, aDateTime));
+        aDateTime = getADate("2000-01-04T00:00:00");
+        bDateTime = getADate("1999-12-31T00:00:00");
+        assertEquals("WOWM1b", -1,
+            cWeekOfWeekyear.compare(aDateTime, bDateTime));
+        assertEquals("WOWP1b", 1,
+            cWeekOfWeekyear.compare(bDateTime, aDateTime));
     }   // end of testMillis
 
     /**
@@ -540,44 +540,44 @@ public class TestDateTimeComparator extends TestCase {
     public void testWOYY() {
         // How do I test the end conditions of this?
         // Don't understand ......
-        aDateTime = getADate( "1998-12-31T23:59:59" );
-        bDateTime = getADate( "1999-01-01T00:00:00" );
-        assertEquals( "YOYYZ", 0, cWeekyear.compare( aDateTime, bDateTime ) );
-        bDateTime = getADate( "1999-01-04T00:00:00" );
-        assertEquals( "YOYYM1", -1, cWeekyear.compare( aDateTime, bDateTime ) );
-        assertEquals( "YOYYP1", 1, cWeekyear.compare( bDateTime, aDateTime ) );
+        aDateTime = getADate("1998-12-31T23:59:59");
+        bDateTime = getADate("1999-01-01T00:00:00");
+        assertEquals("YOYYZ", 0, cWeekyear.compare(aDateTime, bDateTime));
+        bDateTime = getADate("1999-01-04T00:00:00");
+        assertEquals("YOYYM1", -1, cWeekyear.compare(aDateTime, bDateTime));
+        assertEquals("YOYYP1", 1, cWeekyear.compare(bDateTime, aDateTime));
     }   // end of testWOYY
 
     /**
      * Test unequal comparisons with month comparators.
      */
     public void testMonth() {
-        aDateTime = getADate( "2002-04-30T00:00:00" );
-        bDateTime = getADate( "2002-05-01T00:00:00" );
-        assertEquals( "MONTHM1a", -1, cMonth.compare( aDateTime, bDateTime ) );
-        assertEquals( "MONTHP1a", 1, cMonth.compare( bDateTime, aDateTime ) );
-        aDateTime = getADate( "1900-01-01T00:00:00" );
-        bDateTime = getADate( "1899-12-31T00:00:00" );
-        assertEquals( "MONTHM1b", -1, cMonth.compare( aDateTime, bDateTime ) );
-        assertEquals( "MONTHP1b", 1, cMonth.compare( bDateTime, aDateTime ) );
+        aDateTime = getADate("2002-04-30T00:00:00");
+        bDateTime = getADate("2002-05-01T00:00:00");
+        assertEquals("MONTHM1a", -1, cMonth.compare(aDateTime, bDateTime));
+        assertEquals("MONTHP1a", 1, cMonth.compare(bDateTime, aDateTime));
+        aDateTime = getADate("1900-01-01T00:00:00");
+        bDateTime = getADate("1899-12-31T00:00:00");
+        assertEquals("MONTHM1b", -1, cMonth.compare(aDateTime, bDateTime));
+        assertEquals("MONTHP1b", 1, cMonth.compare(bDateTime, aDateTime));
     }   // end of testMonth
 
     /**
      * Test unequal comparisons with year comparators.
      */
     public void testYear() {
-        aDateTime = getADate( "2000-01-01T00:00:00" );
-        bDateTime = getADate( "2001-01-01T00:00:00" );
-        assertEquals( "YEARM1a", -1, cYear.compare( aDateTime, bDateTime ) );
-        assertEquals( "YEARP1a", 1, cYear.compare( bDateTime, aDateTime ) );
-        aDateTime = getADate( "1968-12-31T23:59:59" );
-        bDateTime = getADate( "1970-01-01T00:00:00" );
-        assertEquals( "YEARM1b", -1, cYear.compare( aDateTime, bDateTime ) );
-        assertEquals( "YEARP1b", 1, cYear.compare( bDateTime, aDateTime ) );
-        aDateTime = getADate( "1969-12-31T23:59:59" );
-        bDateTime = getADate( "1970-01-01T00:00:00" );
-        assertEquals( "YEARM1c", -1, cYear.compare( aDateTime, bDateTime ) );
-        assertEquals( "YEARP1c", 1, cYear.compare( bDateTime, aDateTime ) );
+        aDateTime = getADate("2000-01-01T00:00:00");
+        bDateTime = getADate("2001-01-01T00:00:00");
+        assertEquals("YEARM1a", -1, cYear.compare(aDateTime, bDateTime));
+        assertEquals("YEARP1a", 1, cYear.compare(bDateTime, aDateTime));
+        aDateTime = getADate("1968-12-31T23:59:59");
+        bDateTime = getADate("1970-01-01T00:00:00");
+        assertEquals("YEARM1b", -1, cYear.compare(aDateTime, bDateTime));
+        assertEquals("YEARP1b", 1, cYear.compare(bDateTime, aDateTime));
+        aDateTime = getADate("1969-12-31T23:59:59");
+        bDateTime = getADate("1970-01-01T00:00:00");
+        assertEquals("YEARM1c", -1, cYear.compare(aDateTime, bDateTime));
+        assertEquals("YEARP1c", 1, cYear.compare(bDateTime, aDateTime));
     }   // end of testYear
 
     /*
@@ -593,10 +593,10 @@ public class TestDateTimeComparator extends TestCase {
             "1998-01-20T00:00:00"
         };
         //
-        List sl = loadAList( dtStrs );
-        boolean isSorted1 = isListSorted( sl );
-        Collections.sort( sl );
-        boolean isSorted2 = isListSorted( sl );
+        List sl = loadAList(dtStrs);
+        boolean isSorted1 = isListSorted(sl);
+        Collections.sort(sl);
+        boolean isSorted2 = isListSorted(sl);
         assertEquals("ListBasic", !isSorted1, isSorted2);
      } // end of testListBasic
 
@@ -607,16 +607,16 @@ public class TestDateTimeComparator extends TestCase {
         //
         List sl = new ArrayList();
         long base = 12345L * 1000L;
-        sl.add( new DateTime( base + 999L, DateTimeZone.UTC ) );
-        sl.add( new DateTime( base + 222L, DateTimeZone.UTC ) );
-        sl.add( new DateTime( base + 456L, DateTimeZone.UTC ) );
-        sl.add( new DateTime( base + 888L, DateTimeZone.UTC ) );
-        sl.add( new DateTime( base + 123L, DateTimeZone.UTC ) );
-        sl.add( new DateTime( base + 000L, DateTimeZone.UTC ) );
+        sl.add(new DateTime(base + 999L, DateTimeZone.UTC));
+        sl.add(new DateTime(base + 222L, DateTimeZone.UTC));
+        sl.add(new DateTime(base + 456L, DateTimeZone.UTC));
+        sl.add(new DateTime(base + 888L, DateTimeZone.UTC));
+        sl.add(new DateTime(base + 123L, DateTimeZone.UTC));
+        sl.add(new DateTime(base + 000L, DateTimeZone.UTC));
         //
-        boolean isSorted1 = isListSorted( sl );
-        Collections.sort( sl, cMillis );
-        boolean isSorted2 = isListSorted( sl );
+        boolean isSorted1 = isListSorted(sl);
+        Collections.sort(sl, cMillis);
+        boolean isSorted2 = isListSorted(sl);
         assertEquals("ListLillis", !isSorted1, isSorted2);
     } // end of testListSecond
 
@@ -635,10 +635,10 @@ public class TestDateTimeComparator extends TestCase {
             "1999-02-01T00:00:22"
         };
         //
-        List sl = loadAList( dtStrs );
-        boolean isSorted1 = isListSorted( sl );
-        Collections.sort( sl, cSecond );
-        boolean isSorted2 = isListSorted( sl );
+        List sl = loadAList(dtStrs);
+        boolean isSorted1 = isListSorted(sl);
+        Collections.sort(sl, cSecond);
+        boolean isSorted2 = isListSorted(sl);
         assertEquals("ListSecond", !isSorted1, isSorted2);
     } // end of testListSecond
 
@@ -656,10 +656,10 @@ public class TestDateTimeComparator extends TestCase {
             "1999-02-01T00:22:00"
         };
         //
-        List sl = loadAList( dtStrs );
-        boolean isSorted1 = isListSorted( sl );
-        Collections.sort( sl, cMinute );
-        boolean isSorted2 = isListSorted( sl );
+        List sl = loadAList(dtStrs);
+        boolean isSorted1 = isListSorted(sl);
+        Collections.sort(sl, cMinute);
+        boolean isSorted2 = isListSorted(sl);
         assertEquals("ListMinute", !isSorted1, isSorted2);
     } // end of testListMinute
 
@@ -677,10 +677,10 @@ public class TestDateTimeComparator extends TestCase {
             "1999-02-01T17:00:00"
         };
         //
-        List sl = loadAList( dtStrs );
-        boolean isSorted1 = isListSorted( sl );
-        Collections.sort( sl, cHour );
-        boolean isSorted2 = isListSorted( sl );
+        List sl = loadAList(dtStrs);
+        boolean isSorted1 = isListSorted(sl);
+        Collections.sort(sl, cHour);
+        boolean isSorted2 = isListSorted(sl);
         assertEquals("ListHour", !isSorted1, isSorted2);
     } // end of testListHour
 
@@ -700,10 +700,10 @@ public class TestDateTimeComparator extends TestCase {
             "2002-04-20T10:00:00"
         };
         //
-        List sl = loadAList( dtStrs );
-        boolean isSorted1 = isListSorted( sl );
-        Collections.sort( sl, cDayOfWeek );
-        boolean isSorted2 = isListSorted( sl );
+        List sl = loadAList(dtStrs);
+        boolean isSorted1 = isListSorted(sl);
+        Collections.sort(sl, cDayOfWeek);
+        boolean isSorted2 = isListSorted(sl);
         assertEquals("ListDOW", !isSorted1, isSorted2);
     } // end of testListDOW
 
@@ -722,10 +722,10 @@ public class TestDateTimeComparator extends TestCase {
             "2002-04-14T10:00:00"
         };
         //
-        List sl = loadAList( dtStrs );
-        boolean isSorted1 = isListSorted( sl );
-        Collections.sort( sl, cDayOfMonth );
-        boolean isSorted2 = isListSorted( sl );
+        List sl = loadAList(dtStrs);
+        boolean isSorted1 = isListSorted(sl);
+        Collections.sort(sl, cDayOfMonth);
+        boolean isSorted2 = isListSorted(sl);
         assertEquals("ListDOM", !isSorted1, isSorted2);
     } // end of testListDOM
 
@@ -743,10 +743,10 @@ public class TestDateTimeComparator extends TestCase {
             "2002-10-30T10:00:00"
         };
         //
-        List sl = loadAList( dtStrs );
-        boolean isSorted1 = isListSorted( sl );
-        Collections.sort( sl, cDayOfYear );
-        boolean isSorted2 = isListSorted( sl );
+        List sl = loadAList(dtStrs);
+        boolean isSorted1 = isListSorted(sl);
+        Collections.sort(sl, cDayOfYear);
+        boolean isSorted2 = isListSorted(sl);
         assertEquals("ListDOY", !isSorted1, isSorted2);
     } // end of testListDOY
 
@@ -764,10 +764,10 @@ public class TestDateTimeComparator extends TestCase {
             "2002-10-01T10:00:00"
         };
         //
-        List sl = loadAList( dtStrs );
-        boolean isSorted1 = isListSorted( sl );
-        Collections.sort( sl, cWeekOfWeekyear );
-        boolean isSorted2 = isListSorted( sl );
+        List sl = loadAList(dtStrs);
+        boolean isSorted1 = isListSorted(sl);
+        Collections.sort(sl, cWeekOfWeekyear);
+        boolean isSorted2 = isListSorted(sl);
         assertEquals("ListWOW", !isSorted1, isSorted2);
     } // end of testListWOW
 
@@ -781,10 +781,10 @@ public class TestDateTimeComparator extends TestCase {
             "2002-01-01T10:00:00"
         };
         //
-        List sl = loadAList( dtStrs );
-        boolean isSorted1 = isListSorted( sl );
-        Collections.sort( sl, cWeekyear );
-        boolean isSorted2 = isListSorted( sl );
+        List sl = loadAList(dtStrs);
+        boolean isSorted1 = isListSorted(sl);
+        Collections.sort(sl, cWeekyear);
+        boolean isSorted2 = isListSorted(sl);
         assertEquals("ListYOYY", !isSorted1, isSorted2);
     } // end of testListYOYY
 
@@ -803,10 +803,10 @@ public class TestDateTimeComparator extends TestCase {
             "2002-10-01T10:00:00"
         };
         //
-        List sl = loadAList( dtStrs );
-        boolean isSorted1 = isListSorted( sl );
-        Collections.sort( sl, cMonth );
-        boolean isSorted2 = isListSorted( sl );
+        List sl = loadAList(dtStrs);
+        boolean isSorted1 = isListSorted(sl);
+        Collections.sort(sl, cMonth);
+        boolean isSorted2 = isListSorted(sl);
         assertEquals("ListMonth", !isSorted1, isSorted2);
     } // end of testListMonth
 
@@ -824,10 +824,10 @@ public class TestDateTimeComparator extends TestCase {
             "2100-02-01T00:00:00"
         };
         //
-        List sl = loadAList( dtStrs );
-        boolean isSorted1 = isListSorted( sl );
-        Collections.sort( sl, cYear );
-        boolean isSorted2 = isListSorted( sl );
+        List sl = loadAList(dtStrs);
+        boolean isSorted1 = isListSorted(sl);
+        Collections.sort(sl, cYear);
+        boolean isSorted2 = isListSorted(sl);
         assertEquals("ListYear", !isSorted1, isSorted2);
      } // end of testListYear
 
@@ -845,10 +845,10 @@ public class TestDateTimeComparator extends TestCase {
             "2100-07-04T00:00:00"
         };
         //
-        List sl = loadAList( dtStrs );
-        boolean isSorted1 = isListSorted( sl );
-        Collections.sort( sl, cDate );
-        boolean isSorted2 = isListSorted( sl );
+        List sl = loadAList(dtStrs);
+        boolean isSorted1 = isListSorted(sl);
+        Collections.sort(sl, cDate);
+        boolean isSorted2 = isListSorted(sl);
         assertEquals("ListDate", !isSorted1, isSorted2);
     } // end of testListDate
 
@@ -866,10 +866,10 @@ public class TestDateTimeComparator extends TestCase {
             "1999-02-01T17:00:44"
         };
         //
-        List sl = loadAList( dtStrs );
-        boolean isSorted1 = isListSorted( sl );
-        Collections.sort( sl, cTime );
-        boolean isSorted2 = isListSorted( sl );
+        List sl = loadAList(dtStrs);
+        boolean isSorted1 = isListSorted(sl);
+        Collections.sort(sl, cTime);
+        boolean isSorted2 = isListSorted(sl);
         assertEquals("ListTime", !isSorted1, isSorted2);
     } // end of testListTime
 
@@ -932,12 +932,12 @@ public class TestDateTimeComparator extends TestCase {
         // tl must be populated with DateTime objects.
         DateTime lhDT = (DateTime)tl.get(0);
         DateTime rhDT = null;
-        Long lhVal = new Long( lhDT.getMillis() );
+        Long lhVal = new Long(lhDT.getMillis());
         Long rhVal = null;
         for (int i = 1; i < tl.size(); ++i) {
             rhDT = (DateTime)tl.get(i);
-            rhVal = new Long( rhDT.getMillis() );
-            if ( lhVal.compareTo( rhVal) > 0 ) return false;
+            rhVal = new Long(rhDT.getMillis());
+            if (lhVal.compareTo(rhVal) > 0) return false;
             //
             lhVal = rhVal;  // swap for next iteration
             lhDT = rhDT;    // swap for next iteration

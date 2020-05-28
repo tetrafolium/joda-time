@@ -854,8 +854,7 @@ public class ZoneInfoCompiler {
                         // Check if iRules actually just refers to a savings.
                         int saveMillis = parseTime(zone.iRules);
                         builder.setFixedSavings(zone.iFormat, saveMillis);
-                    }
-                    catch (Exception e) {
+                    } catch (Exception e) {
                         RuleSet rs = ruleSets.get(zone.iRules);
                         if (rs == null) {
                             throw new IllegalArgumentException

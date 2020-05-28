@@ -74,7 +74,7 @@ public class TestCompiler extends TestCase {
         "# Incomplete Rules for building America/Los_Angeles time zone.\n" +
         "\n" +
         "Rule    US  1918    1919    -   Mar lastSun 2:00    1:00    D\n" +
-        "Rule    \n" ; // this line is intentionally incomplete
+        "Rule    \n"; // this line is intentionally incomplete
 
     static final String BROKEN_TIMEZONE_FILE_2 =
         "# Incomplete Zone for building America/Los_Angeles time zone.\n" +

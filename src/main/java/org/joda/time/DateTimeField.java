@@ -290,7 +290,7 @@ public abstract class DateTimeField {
      * @param value  the value to add, in the units of the field
      * @return the updated milliseconds
      */
-    public abstract long addWrapField(long instant, int value) ;
+    public abstract long addWrapField(long instant, int value);
 
     /**
      * Adds a value (which may be negative) to the partial instant,

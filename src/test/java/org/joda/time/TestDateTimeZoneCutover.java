@@ -969,43 +969,43 @@ public class TestDateTimeZoneCutover extends TestCase {
     }
 
     public void test_getOffsetFromLocal_Guatemata_Autumn() {
-        doTest_getOffsetFromLocal( 2006, 9,30,23, 0,
+        doTest_getOffsetFromLocal(2006, 9,30,23, 0,
                                   "2006-09-30T23:00:00.000-05:00", -5, ZONE_GUATEMALA);
-        doTest_getOffsetFromLocal( 2006, 9,30,23,30,
+        doTest_getOffsetFromLocal(2006, 9,30,23,30,
                                   "2006-09-30T23:30:00.000-05:00", -5, ZONE_GUATEMALA);
         
-        doTest_getOffsetFromLocal( 2006, 9,30,23, 0,
+        doTest_getOffsetFromLocal(2006, 9,30,23, 0,
                                   "2006-09-30T23:00:00.000-05:00", -5, ZONE_GUATEMALA);
-        doTest_getOffsetFromLocal( 2006, 9,30,23,30,
+        doTest_getOffsetFromLocal(2006, 9,30,23,30,
                                   "2006-09-30T23:30:00.000-05:00", -5, ZONE_GUATEMALA);
         
-        doTest_getOffsetFromLocal( 2006,10, 1, 0, 0,
+        doTest_getOffsetFromLocal(2006,10, 1, 0, 0,
                                   "2006-10-01T00:00:00.000-06:00", -6, ZONE_GUATEMALA);
-        doTest_getOffsetFromLocal( 2006,10, 1, 0,30,
+        doTest_getOffsetFromLocal(2006,10, 1, 0,30,
                                   "2006-10-01T00:30:00.000-06:00", -6, ZONE_GUATEMALA);
-        doTest_getOffsetFromLocal( 2006,10, 1, 1, 0,
+        doTest_getOffsetFromLocal(2006,10, 1, 1, 0,
                                   "2006-10-01T01:00:00.000-06:00", -6, ZONE_GUATEMALA);
-        doTest_getOffsetFromLocal( 2006,10, 1, 1,30,
+        doTest_getOffsetFromLocal(2006,10, 1, 1,30,
                                   "2006-10-01T01:30:00.000-06:00", -6, ZONE_GUATEMALA);
-        doTest_getOffsetFromLocal( 2006,10, 1, 2, 0,
+        doTest_getOffsetFromLocal(2006,10, 1, 2, 0,
                                   "2006-10-01T02:00:00.000-06:00", -6, ZONE_GUATEMALA);
-        doTest_getOffsetFromLocal( 2006,10, 1, 2,30,
+        doTest_getOffsetFromLocal(2006,10, 1, 2,30,
                                   "2006-10-01T02:30:00.000-06:00", -6, ZONE_GUATEMALA);
-        doTest_getOffsetFromLocal( 2006,10, 1, 3, 0,
+        doTest_getOffsetFromLocal(2006,10, 1, 3, 0,
                                   "2006-10-01T03:00:00.000-06:00", -6, ZONE_GUATEMALA);
-        doTest_getOffsetFromLocal( 2006,10, 1, 3,30,
+        doTest_getOffsetFromLocal(2006,10, 1, 3,30,
                                   "2006-10-01T03:30:00.000-06:00", -6, ZONE_GUATEMALA);
-        doTest_getOffsetFromLocal( 2006,10, 1, 4, 0,
+        doTest_getOffsetFromLocal(2006,10, 1, 4, 0,
                                   "2006-10-01T04:00:00.000-06:00", -6, ZONE_GUATEMALA);
-        doTest_getOffsetFromLocal( 2006,10, 1, 4,30,
+        doTest_getOffsetFromLocal(2006,10, 1, 4,30,
                                   "2006-10-01T04:30:00.000-06:00", -6, ZONE_GUATEMALA);
-        doTest_getOffsetFromLocal( 2006,10, 1, 5, 0,
+        doTest_getOffsetFromLocal(2006,10, 1, 5, 0,
                                   "2006-10-01T05:00:00.000-06:00", -6, ZONE_GUATEMALA);
-        doTest_getOffsetFromLocal( 2006,10, 1, 5,30,
+        doTest_getOffsetFromLocal(2006,10, 1, 5,30,
                                   "2006-10-01T05:30:00.000-06:00", -6, ZONE_GUATEMALA);
-        doTest_getOffsetFromLocal( 2006,10, 1, 6, 0,
+        doTest_getOffsetFromLocal(2006,10, 1, 6, 0,
                                   "2006-10-01T06:00:00.000-06:00", -6, ZONE_GUATEMALA);
-        doTest_getOffsetFromLocal( 2006,10, 1, 6,30,
+        doTest_getOffsetFromLocal(2006,10, 1, 6,30,
                                   "2006-10-01T06:30:00.000-06:00", -6, ZONE_GUATEMALA);
     }
 

@@ -2543,7 +2543,7 @@ public class DateTimeFormatterBuilder {
             super();
             iParsers = parsers;
             int est = 0;
-            for (int i=parsers.length; --i>=0 ;) {
+            for (int i=parsers.length; --i>=0;) {
                 InternalParser parser = parsers[i];
                 if (parser != null) {
                     int len = parser.estimateParsedLength();
