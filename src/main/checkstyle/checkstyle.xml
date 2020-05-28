@@ -102,11 +102,11 @@
       <property name="offCommentFormat" value="CSOFF"/>
       <property name="onCommentFormat" value="CSON"/>
     </module>
-  </module>
-  <module name="SuppressWithNearbyCommentFilter">
-    <property name="commentFormat" value="CSIGNORE"/>
-    <property name="checkFormat" value=".*"/>
-    <property name="checkC" value="false"/>
+    <module name="SuppressWithNearbyCommentFilter">
+      <property name="commentFormat" value="CSIGNORE"/>
+      <property name="checkFormat" value=".*"/>
+      <property name="checkC" value="false"/>
+    </module>
   </module>
 
   <!-- Header inlined due to m2e -->
